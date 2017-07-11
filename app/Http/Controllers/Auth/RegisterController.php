@@ -3,6 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Teacher;
+use App\Organization;
+use App\School;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -67,5 +71,58 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     * @author 
+     **/
+    public function registerTeacher(Request $request)
+    {
+        return Teacher::create([
+            'name' => $request['name'], 
+            'institution' =>$request['inst'] , 
+            'date_of_birth' =>$request['dob'] , 
+            'email' =>$request['email'] , 
+            'phone' => $request['phoneNo'], 
+            'skills' => $request['skills'], 
+            'username' => $request['username'], 
+            ]);
+    }
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     * @author 
+     **/
+    public function registerSchool(Request $request)
+    {
+        return School::create([
+            'name' => $request['name'],
+            'location' => $request['location'],
+            'age' => $request['age'],
+            'username' => $request['username'],
+
+            ]);
+    }
+
+    /**
+     * undocumented function
+     *
+     * @return void
+     * @author 
+     **/
+    public function registerOrganization(Request $request)
+    {
+        return Organization::create([
+            'name' => $request['name'],
+            'address' => $request['address'],
+            'contact' => $request['contact'],
+            'email' => $request['email'],
+
+            ]);
     }
 }

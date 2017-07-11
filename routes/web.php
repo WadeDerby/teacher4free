@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/news','HomeController@news');
+Route::get('/about','HomeController@about');
+Route::get('/projects','HomeController@projects');
+Route::get('/contact','HomeController@contact');
+Route::get('/join','HomeController@join');
+Route::get('/register','HomeController@join');
+
+
+Route::get('/register/teacher','TeacherController@create');
+Route::get('/register/school','SchoolController@create');
+Route::get('/register/ngo','OrganizationController@create');
+Route::post('/register/teacher','Auth\RegisterController@registerTeacher');
+Route::post('/register/school','Auth\RegisterController@registerSchool');
+Route::post('/register/ngo','Auth\RegisterController@registerOrganization');
+
+
+
+

@@ -1,0 +1,50 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+header{
+	height: 85px;
+    /*background-color: rgba(240,0,0,.8);*/
+}
+
+.logo{
+	display: inline-block;
+	width: 40%;
+	height: inherit;
+}
+.img-logo{
+	padding: 10px 40px;
+}
+.collection{
+	display: inline-block;
+	width: 50%;
+	height: inherit;
+	vertical-align: top;
+}
+
+.collection ul{
+	margin: 0;
+	padding: 0;
+	height: inherit;
+}
+
+.collection ul li{
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	vertical-align: middle;
+	padding: 25px 0;
+	height: 32px;
+	width: 20%;
+	cursor: pointer;
+	border-bottom: 3px solid transparent; 
+}
+
+.collection ul li:hover{
+	border-color: gold;
+}
+
+.collection ul li a {
+	text-decoration: none;
+	color: black;
+}
