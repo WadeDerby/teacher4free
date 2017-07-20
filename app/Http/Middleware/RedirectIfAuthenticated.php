@@ -18,7 +18,13 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            if(Auth::user()->scope == 1){
+                return redirect('teacher/' .Auth::user()->username. '');
+            }elseif (Auth::user()->scope == 2) {
+                return redirect('school/' .Auth::user()->username. '');
+            }else{
+                return redirect('/');
+            }
         }
 
         return $next($request);

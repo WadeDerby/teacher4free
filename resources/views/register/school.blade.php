@@ -20,7 +20,7 @@
 		</div>
 
 		<div class="input-field">
-		<input  name="user" type="text"  required>
+		<input  name="username" type="text"  required>
 		<label for="user">Username</label>
 		</div>
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Teacher;
+use Auth;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -14,7 +15,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        //
+        $teacher = Teacher::where('username', Auth::user()->username)->first();
+        // dd($teacher);
+        return view('teacher.dashboard', compact('teacher'));
     }
 
     /**
@@ -44,9 +47,29 @@ class TeacherController extends Controller
      * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
-    public function show(Teacher $teacher)
+    public function profile(Teacher $teacher)
     {
-        //
+        return view('teacher.profile');
+    }
+    public function skills(Teacher $teacher)
+    {
+        return view('teacher.skills');
+    }
+    public function qualification(Teacher $teacher)
+    {
+        return view('teacher.qualification');
+    }
+    public function timeline(Teacher $teacher)
+    {
+        return view('teacher.timeline');
+    }
+    public function messages(Teacher $teacher)
+    {
+        return view('teacher.messages');
+    }
+    public function settings(Teacher $teacher)
+    {
+        return view('teacher.settings');
     }
 
     /**

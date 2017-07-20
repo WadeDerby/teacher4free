@@ -9,6 +9,7 @@ use App\School;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -31,7 +32,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectToTeacher = 'auth/teacher';
+    protected $redirectToSchool = 'auth/school';
 
     /**
      * Create a new controller instance.
@@ -81,7 +83,7 @@ class RegisterController extends Controller
      **/
     public function registerTeacher(Request $request)
     {
-        return Teacher::create([
+        Teacher::create([
             'name' => $request['name'], 
             'institution' =>$request['inst'] , 
             'date_of_birth' =>$request['dob'] , 
@@ -90,6 +92,19 @@ class RegisterController extends Controller
             'skills' => $request['skills'], 
             'username' => $request['username'], 
             ]);
+        $teacher = Teacher::where('username', $request['username'])->get();
+
+        if($teacher->count() > 0){
+            User::create([
+                'username' => $request['username'],
+                'password' => Hash::make($request['pass']),
+                'entity_id' => $teacher[0]->id,
+                'scope' => 1 ,
+                ]);
+            return redirect('/login');
+        }else {
+            return abort(500);
+        }
     }
 
     /**
@@ -100,13 +115,26 @@ class RegisterController extends Controller
      **/
     public function registerSchool(Request $request)
     {
-        return School::create([
+        School::create([
             'name' => $request['name'],
             'location' => $request['location'],
             'age' => $request['age'],
             'username' => $request['username'],
 
             ]);
+        $school = School::where('username', $request['username'])->get();
+
+        if($school->count() > 0){
+            User::create([
+                'username' => $request['username'],
+                'password' => Hash::make($request['pass']),
+                'entity_id' => $school[0]->id,
+                'scope' => 2 ,
+                ]);
+            return redirect('/login');
+        }else {
+            return abort(500);
+        }
     }
 
     /**

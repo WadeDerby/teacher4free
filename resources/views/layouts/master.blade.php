@@ -18,7 +18,7 @@
             <li> <a href="{{url('/news')}}">News</a> </li><!--  
          --><li> <a href="{{url('/about')}}">About</a> </li><!--  
          --><li> <a href="{{url('/projects')}}">Projects</a> </li><!--  
-         --><li> <a href="{{url('/contact')}}">Contact Us</a> </li><!--  
+         --><li> <a href="{{url('/contact')}}">Contact </a> </li><!--  
          --><li> <a href="{{url('/join')}}">Join</a> </li>
         </ul>
         </nav>

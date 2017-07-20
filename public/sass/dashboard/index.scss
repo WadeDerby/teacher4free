@@ -1,0 +1,43 @@
+.group {
+  display: inline-block;
+  padding: 15px 4px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.group .group-title {
+  display: block;
+  font-size: 1.4em;
+  color: #bbbbbb;
+  padding-left: 15px;
+}
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 3px 4px 16px rgba(33, 30, 31, 0.1);
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  padding: 15px;
+}
+.card.square-3 {
+  width: 330px;
+  height: 200px;
+}
+.card.square-2 {
+  width: 515px;
+  height: 300px;
+}
+.card-title {
+  text-align: left;
+  // padding: 10px 10px 2px 7px;
+  font-size: 16px;
+  font-weight: 500;
+  color: silver;
+  text-transform: capitalize;
+  border-bottom: 1px solid silver;
+  padding-bottom: 5px;
+}

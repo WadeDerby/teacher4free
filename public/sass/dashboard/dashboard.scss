@@ -1,0 +1,178 @@
+.main-wrapper{
+	width: 100%;
+	font-family: Segoe UI, Roboto, Trebuchet MS, Helvetica, Helvetica Neue, San Fransisco !important;
+  	background: #f3f7fa;
+  	height:700px;
+	// overflow-y: hidden;
+
+	.side-bar{
+		width: 18%;
+		display: inline-block;
+		vertical-align: top;
+		height: 700px;
+		background: rgb(50,53,68);
+
+
+		.profile{
+			position: relative;
+			width: 100%;
+			height: 200px;
+			background: rgb(233,164,45);
+
+			.profile-photo{
+				position: relative;
+			    width: 90px;
+			    height: 100px;
+			    text-align: center;
+			    display: block;
+			    border-radius: 50%;
+			    vertical-align: top;
+			    padding: 10px 30%;
+			}
+			.user-names{
+				position: relative;
+				display: block;
+				top: 25px;
+				// width: 170px;
+				color: white;
+				// margin: 50px 0px;
+				text-align: center;
+
+				h3{
+					font-size: 1.2em;
+    				font-style: normal;
+    				font-weight: 400;
+    				text-transform: uppercase;
+				}
+				h4{
+					font-size: 1em;
+				    font-style: italic;
+				    font-weight: 400;
+				    text-transform: lowercase;
+				}
+			}
+		}
+
+		.collection{
+			position:relative;
+			padding: 0;
+			margin: 20px 0;
+
+			.collection-items{
+				display: inline-block;
+				width: 100%;
+				padding: 20px 0;
+				color: rgb(152,152,160);
+				cursor: pointer;
+
+				.font-icon{
+					font-size: 1.5em;
+					color: rgb(152,152,160) ;
+					padding: 0 20px 0 40px;
+					display: inline-block;
+					vertical-align: top;
+				}
+
+				span{
+					display: inline-block;
+					vertical-align: top;
+				}
+			}
+
+			.collection-items:hover{
+				background: rgb(30,32,44);
+
+			}
+		}
+	}
+
+	.content-wrap{
+		width: 80%;
+		display: inline-block;
+		vertical-align: top;
+		height: 700px;
+
+		header{
+			width: 100%;
+			height: 25px;
+
+			input[type=text]{
+				width: 75%;
+    			height: inherit;
+    			background-color: white;
+    			border: 2px solid gray;
+    			border-radius: 5px;
+    			margin-left: 2%;
+    			margin-top: 5px;
+    			padding: 5px;
+			}
+			select{
+				width: 10%;
+				height: 30px;
+				background-color: white;
+    			border: 2px solid gray;
+    			border-radius: 5px;
+			}
+
+			button{
+				background-color: #323544;
+    			color: #fff;
+    			width: 5%;
+    			height: 30px;
+    			border-radius: 5px;
+    			// display: block;
+    			border: none;
+			}
+		}
+
+		#content{
+				width: 100%;
+    			margin-top: 40px;
+    			margin-left: 2%;
+
+    			.page-title{
+    				font-size: 1.3em;
+    			}
+			}
+	}
+	
+}
+
+.form {
+
+
+	span.field{
+		display:block;
+
+	input[type=text], input[type=date] {
+		width: 75%;
+		height: inherit;
+		background-color: white;
+		border: 2px solid gray;
+		border-radius: 5px;
+		margin-left: 2%;
+		margin-top: 5px;
+		padding: 5px;
+		}
+	}
+
+}
+
+div.buttons{
+		width: 80%;
+		text-align: right;
+}
+button{
+	background-color: #323544;
+	color: #fff;
+	width: 10%;
+	height: 30px;
+	border-radius: 5px;
+	// display: block;
+	border: none;
+
+	&#add{
+	    margin-top: 40px;
+    	margin-left: 30px;
+	}
+}

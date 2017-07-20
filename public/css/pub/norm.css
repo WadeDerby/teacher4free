@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+/*    font-family: segoe ui, roboto;*/
+}
+input,select,textarea {
+    outline: none;
+}
+input:-webkit-autofill,textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+button::-moz-focus-inner {
+    border: 0;
+}
+button:focus {
+    outline: 0;
+}
+button:active {
+    outline: none;
+    border: none;
+}
+button {
+    cursor: pointer;
+}
+select {
+    cursor: pointer;
+}
+fieldset {
+    border: none;
+}
+a {
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    padding: 0;
+    margin: 0;
+}

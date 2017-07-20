@@ -1,0 +1,22 @@
+#profile form {
+  width: 100%;
+  height: 400px;
+}
+#profile form .photo-form {
+  height: 170px;
+}
+#profile form .photo-form .profile-photo {
+  position: relative;
+  width: 90px;
+  height: 100px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  vertical-align: top;
+  padding: 10px 30%;
+}
+#profile form .photo-form .photo-text {
+  text-align: center;
+  display: block;
+  width: 70%;
+}
