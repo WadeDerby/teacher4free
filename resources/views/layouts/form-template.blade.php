@@ -4,6 +4,7 @@
         <meta http-equiv="content-type" content="text/html"/>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="{{url('css/index.css')}}"/>
+        <link rel="stylesheet" href="{{url('css/forms.css')}}"/>
         <link rel="icon" href="{{url('imgs/pub/favicon.png')}}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     @yield('head')

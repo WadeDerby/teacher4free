@@ -7,6 +7,8 @@
 
 @section('body')
 	
-	<h2>Projects page here</h2>
+	<div class="pages-content">
+		
+	</div>
 	
 @endsection

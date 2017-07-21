@@ -47,6 +47,10 @@ class TeacherController extends Controller
      * @param  \App\Teacher  $teacher
      * @return \Illuminate\Http\Response
      */
+    public function home(Teacher $teacher)
+    {
+        return view('teacher.home');
+    }
     public function profile(Teacher $teacher)
     {
         return view('teacher.profile');
@@ -54,6 +58,10 @@ class TeacherController extends Controller
     public function skills(Teacher $teacher)
     {
         return view('teacher.skills');
+    }
+    public function courses(Teacher $teacher)
+    {
+        return view('teacher.courses');
     }
     public function qualification(Teacher $teacher)
     {
@@ -70,6 +78,11 @@ class TeacherController extends Controller
     public function settings(Teacher $teacher)
     {
         return view('teacher.settings');
+    }
+    public function search(Request $request)
+    {
+        dd($request->all());
+        // return view('teacher.search');
     }
 
     /**

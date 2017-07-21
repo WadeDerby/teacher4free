@@ -1,0 +1,164 @@
+div#index{
+	position: relative;
+
+	.banner{
+		width: 70%;
+		padding: 100px 0 250px;
+		margin: 0 auto;
+		border-radius: 8px;
+
+		.title{
+			text-align: center;
+			font-size: 36px;
+			font-weight: 400;
+		}
+		.description {
+			text-align: justify;
+			font-size: 24px;
+		}
+	}
+
+	.quotes-collection{
+		position: relative;
+    	display: block;
+    	width: 100%;
+    	margin-top: 50px;
+
+    	.collection-title{
+    		display: block;
+		    margin: 20px 0;
+		    font-size: 1.3em;
+		    text-transform: uppercase;
+		    text-align: center;
+		}
+
+    	.quotes-item{
+    		position: relative;
+    		width: 80%;
+    		padding: 20px;
+    		margin: 0 auto;
+
+			.quote-body{
+				display: block;
+		    	font-size: 1.3em;
+		    	font-weight: 500;
+		    	font-style: italic;
+		    	width: 100%;
+			}
+
+			.quote-person {
+			    display: block;
+			    text-align: right;
+			    margin-right: 25px;
+			    text-transform: uppercase;
+			    font-size: 1.2em;
+			    font-weight: 500;
+			}
+    	}
+	}
+}
+
+div#contact{
+	width: 100%;
+	margin-top: 100px;
+	padding-bottom: 100px;
+
+	.left{
+		display: inline-block;
+		width: 48%;
+	}
+	.right{
+		display: inline-block;
+		width: 48%;
+		
+		.col{
+			display: block;
+			font-size: 2em;
+			font-weight: 200;
+			margin-bottom: 30px;
+
+			span{
+				display: block;
+			}
+		}
+
+	}
+}
+
+div#about{
+	.title{
+		font-size: 1.5em;
+    	font-weight: 500;
+	}
+	.description{
+		font-size: 1.1em;
+		width: 100%;
+		font-weight: 300;
+	}
+}
+
+div#join{
+	
+	height: 300px;
+
+	.title{
+	    padding: 10px 5px;
+	    font-size: 2.5em;
+	}
+
+	.description {
+	    display: block;
+	    font-size: 1em;
+	}
+
+	.register{
+		display: block;
+		margin-top: 50px;
+
+		.text{
+			font-size: 1.3em;
+    		text-transform: uppercase;
+    		margin-bottom: 10px;
+		}
+		.users{
+			/*display: block;*/
+			/*margin-bottom: 10px;*/
+
+			a{
+				display: inline-block;
+				background-color: #323544;
+    			color: #fff;
+    			width: 5%;
+    			height: 30px;
+    			border-radius: 5px;
+    			border: none;
+    			text-decoration: none;
+    			text-align: center;
+    			padding: 5px;
+			}
+		}
+	}
+}
+
+footer{
+	margin: 100px -40px 0;
+    /*height: 50px;*/
+    padding: 50px 20px;
+    color: black;
+    background-color: white;
+
+    .font-icon{
+    	font-size: 1.5em;
+    }
+
+	.col{
+		display: inline-block;
+		width: 20%;
+		vertical-align: top;
+
+		span{
+			display: block;
+			padding-bottom: 10px;
+		}
+	}
+}

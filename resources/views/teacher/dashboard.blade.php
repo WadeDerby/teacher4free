@@ -30,6 +30,10 @@
 					<i class="fa fa-link font-icon" aria-hidden="true"></i>
 					<span>Skills</span>
 					</li>
+					<li class="collection-items view-btn" data-href="/view/courses">
+					<i class="fa fa-link font-icon" aria-hidden="true"></i>
+					<span>Courses</span>
+					</li>
 					<li class="collection-items view-btn" data-href="/view/qualification">
 					<i class="fa fa-graduation-cap font-icon" aria-hidden="true"></i>
 					<span>Qualification</span>
@@ -51,20 +55,28 @@
 			</nav><!--  
 			--><section class="content-wrap">
 				<header>
-					<form action="">
-						<input type="text" name="" value="" placeholder="Search">
-						<select name="">
+					<form class="search-bar" action="">
+						<input id="search-term" type="text" name="text" value="" placeholder="Search">
+						<select id="search-type" name="specified">
 							<option value="location">Location</option>
 							<option value="school">School</option>
 						</select>
-						<button class="view-btn" data-href="/view/profile">
+						<button data-action="search">
 							<i class="fa fa-search font-icon" aria-hidden="true"></i>
 						</button>
-						<span class="refresh"></span>
-					</form>
+						<button data-action="home">
+							<i class="fa fa-home font-icon" aria-hidden="true"></i>
+						</button>
+						<button class="refresh view-btn" data-href="/home" >
+							<i class="fa fa-refresh font-icon" aria-hidden="true"></i>
+						</button>
+						
+						<input type="hidden" id="user" value="1" placeholder="">
+						</form>
+						
 				</header>
 				<div id="content">
-					@include('teacher.dashboard-home')
+					@include('teacher.home')
 				</div>
 			</section>
 		</section>
@@ -75,7 +87,8 @@
     <script src="{{url('scripts/lib/dashboard.js')}}"></script>
     <script src="{{url('scripts/lib/dashboard.ui.js')}}"></script>
     <!-- <script src="{{url('scripts/ent/pro.js')}}"></script> -->
-    <script src="{{url('scripts/ent/poll.js')}}"></script>
+    <!-- <script src="{{url('scripts/ent/poll.js')}}"></script> -->
+    <script src="{{url('scripts/users/index.js')}}"></script>
 	</body>
 	
 </html>

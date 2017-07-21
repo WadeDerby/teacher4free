@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\School;
 use Illuminate\Http\Request;
+use Auth;
 
 class SchoolController extends Controller
 {
@@ -14,7 +15,8 @@ class SchoolController extends Controller
      */
     public function index()
     {
-        return view('school.dashboard');
+        $school = School::where('username', Auth::user()->username)->first();
+        return view('school.dashboard', compact('school'));
     }
 
     /**
@@ -70,6 +72,40 @@ class SchoolController extends Controller
     public function update(Request $request, School $school)
     {
         //
+    }
+
+    public function profile(School $school)
+    {
+        return view('school.profile');
+    }
+    public function skills(School $school)
+    {
+        return view('school.skills');
+    }
+    public function courses(School $school)
+    {
+        return view('school.courses');
+    }
+    public function qualification(School $school)
+    {
+        return view('school.qualification');
+    }
+    public function timeline(School $school)
+    {
+        return view('school.timeline');
+    }
+    public function messages(School $school)
+    {
+        return view('school.messages');
+    }
+    public function settings(School $school)
+    {
+        return view('school.settings');
+    }
+    public function search(Request $request)
+    {
+        dd($request->all());
+        // return view('teacher.search');
     }
 
     /**

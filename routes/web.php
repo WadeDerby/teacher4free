@@ -36,12 +36,25 @@ Route::post('/register/ngo','Auth\RegisterController@registerOrganization');
 
 
 Route::group(['prefix' => 'teacher/{username}'], function () {
+		Route::get('home','TeacherController@home');
 		Route::get('view/profile','TeacherController@profile');
 		Route::get('view/skills','TeacherController@skills');
+		Route::get('view/courses','TeacherController@courses');
 		Route::get('view/qualification','TeacherController@qualification');
 		Route::get('view/timeline','TeacherController@timeline');
 		Route::get('view/messages','TeacherController@messages');
 		Route::get('view/settings','TeacherController@settings');
+		Route::get('search','TeacherController@search');
 });
 
+Route::group(['prefix' => 'school/{username}'], function () {
+		Route::get('home','SchoolController@home');
+		Route::get('view/profile','SchoolController@profile');
+		Route::get('view/skills','SchoolController@skills');
+		Route::get('view/courses','SchoolController@courses');
+		Route::get('view/timeline','SchoolController@timeline');
+		Route::get('view/messages','SchoolController@messages');
+		Route::get('view/settings','SchoolController@settings');
+		Route::get('search','SchoolController@search');
+});
 

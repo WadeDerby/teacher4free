@@ -1,0 +1,142 @@
+div#index {
+  position: relative;
+}
+div#index .banner {
+  width: 70%;
+  padding: 100px 0 250px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+div#index .banner .title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 400;
+}
+div#index .banner .description {
+  text-align: justify;
+  font-size: 24px;
+}
+div#index .quotes-collection {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 50px;
+}
+div#index .quotes-collection .collection-title {
+  display: block;
+  margin: 20px 0;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+}
+div#index .quotes-collection .quotes-item {
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+}
+div#index .quotes-collection .quotes-item .quote-body {
+  display: block;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-style: italic;
+  width: 100%;
+}
+div#index .quotes-collection .quotes-item .quote-person {
+  display: block;
+  text-align: right;
+  margin-right: 25px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+div#contact {
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 100px;
+}
+div#contact .left {
+  display: inline-block;
+  width: 48%;
+}
+div#contact .right {
+  display: inline-block;
+  width: 48%;
+}
+div#contact .right .col {
+  display: block;
+  font-size: 2em;
+  font-weight: 200;
+  margin-bottom: 30px;
+}
+div#contact .right .col span {
+  display: block;
+}
+
+div#about .title {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+div#about .description {
+  font-size: 1.1em;
+  width: 100%;
+  font-weight: 300;
+}
+
+div#join {
+  height: 300px;
+}
+div#join .title {
+  padding: 10px 5px;
+  font-size: 2.5em;
+}
+div#join .description {
+  display: block;
+  font-size: 1em;
+}
+div#join .register {
+  display: block;
+  margin-top: 50px;
+}
+div#join .register .text {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+div#join .register .users {
+  /*display: block;*/
+  /*margin-bottom: 10px;*/
+}
+div#join .register .users a {
+  display: inline-block;
+  background-color: #323544;
+  color: #fff;
+  width: 5%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+}
+
+footer {
+  margin: 100px -40px 0;
+  /*height: 50px;*/
+  padding: 50px 20px;
+  color: black;
+  background-color: white;
+}
+footer .font-icon {
+  font-size: 1.5em;
+}
+footer .col {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+footer .col span {
+  display: block;
+  padding-bottom: 10px;
+}
