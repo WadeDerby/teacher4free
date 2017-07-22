@@ -14,8 +14,8 @@
         --><span class="col">
             
            
-            <span> +233 555 222 2323 </span>  
-            <span> email@example.com </span> 
+            <span> +233 261885470 </span>  
+            <span> helplinkreach@hotmail.com </span> 
               
         </span><!--  
         --><span class="col">

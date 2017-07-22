@@ -14,7 +14,7 @@
 			JOIN US
 		</div>
 		<div class="description">
-			Are you a volunteer? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores soluta nostrum sint dolore.
+			Are you a volunteer? Be a part of the HelpLink Family.
 		</div>
 
 		<div class="register">
