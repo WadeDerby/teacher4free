@@ -5,14 +5,18 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="{{url('css/index.css')}}"/>
         <link rel="stylesheet" href="{{url('css/forms.css')}}"/>
+        <link rel="stylesheet" href="{{url('css/pages.css')}}"/>
         <link rel="icon" href="{{url('imgs/pub/favicon.png')}}"/>
+        <link rel="stylesheet" href="{{url('fonts/line-awesome/css/line-awesome-font-awesome.min.css')}}"/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     @yield('head')
     </head>
     <body>
     <header id="header" class="">
         <div class="logo">
-            <img class="img-logo" width="77" height="64" src="{{URL::to('img/logo.png')}}" alt="">
+            <a href="{{url('/')}}">
+                <img class="img-logo" width="77" height="64" src="{{URL::to('img/logo.png')}}" alt="">
+            </a>
         </div><!--  
      --><nav class="collection">
         <ul>
@@ -26,10 +30,9 @@
     </header>
     <section class="content-wrapper">
         @yield('body')
+
     </section>
-    <footer id="footer">
-        <p>footer here</p>
-    </footer>
+    @include('layouts.footer')        
        
     </body>
 </html>

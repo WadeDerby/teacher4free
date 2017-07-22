@@ -1,0 +1,60 @@
+body {
+  background: #f0f0f0;
+  color: black;
+}
+body header#header {
+  box-shadow: 0px -3px 20px 3px rgba(0, 0, 0, 0.29);
+}
+body .content-wrapper {
+  padding-top: 100px;
+  width: 80%;
+  margin: 0 auto;
+}
+body .content-wrapper h3 {
+  text-align: left;
+  font-weight: 400;
+  font-size: 1.5em;
+  width: 80%;
+  margin: 30px auto;
+}
+body .content-wrapper .form-design {
+  width: 80%;
+  margin: 20px auto;
+}
+body .content-wrapper .form-design .input-field {
+  display: block;
+  margin: 0 0 20px 0;
+}
+body .content-wrapper .form-design .input-field label {
+  display: block;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+body .content-wrapper .form-design .input-field input[type=text], body .content-wrapper .form-design .input-field input[type=email], body .content-wrapper .form-design .input-field input[type=password], body .content-wrapper .form-design .input-field input[type=date], body .content-wrapper .form-design .input-field textarea {
+  display: block;
+  width: 70%;
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 5px;
+}
+body .content-wrapper .form-design input[type=submit] {
+  background-color: #323544;
+  color: #fff;
+  width: 15%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+body .content-wrapper .form-design .input-button {
+  text-align: right;
+  width: 72%;
+  margin: 30px 0 0;
+}
+body footer#footer {
+  margin: 100px 0px 0;
+  padding: 20px 20px;
+  color: black;
+  background-color: white;
+  box-shadow: 0px -5px 20px 4px rgba(0, 0, 0, 0.15);
+}

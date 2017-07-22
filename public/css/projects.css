@@ -1,0 +1,92 @@
+header#header {
+  box-shadow: 0px -3px 38px 3px rgba(0, 0, 0, 0.29);
+}
+
+#overlay {
+  background-color: #f0f0f0;
+}
+#overlay .content {
+  height: 685px;
+}
+#overlay .content .left {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+}
+#overlay .content .left.one {
+  background: url("../img/projects_1.jpg") no-repeat;
+  background-size: cover;
+}
+#overlay .content .left.two {
+  background: url("../img/projects_2.jpg") no-repeat;
+  background-size: cover;
+}
+#overlay .content .left.three {
+  background: url("../img/projects_3.jpg") no-repeat;
+  background-size: cover;
+}
+#overlay .content .left.four {
+  background: url("../img/projects_4.jpg") no-repeat;
+  background-size: cover;
+}
+#overlay .content .left.five {
+  background: url("../img/projects_5.jpg") no-repeat;
+  background-size: cover;
+}
+#overlay .content .right {
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  vertical-align: top;
+}
+#overlay .content .right .text-wrapper {
+  padding: 65px 75px;
+}
+#overlay .content .right .text-wrapper .link a {
+  color: white;
+}
+#overlay .content .right .client {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 200;
+  margin: 0px 0px 5px 0px;
+  line-height: 1;
+}
+#overlay .content .right .client-name {
+  display: block;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+}
+#overlay .content .right .description {
+  display: block;
+  font-size: 1.5em;
+  line-height: 1.7em;
+  margin: 0px 0px 22px 0px;
+}
+#overlay .content .right.one {
+  background-color: black;
+}
+#overlay .content .right.two {
+  background-color: #00b5de;
+}
+#overlay .content .right.three {
+  background-color: #58585b;
+}
+#overlay .content .right.four {
+  background-color: #00117d;
+}
+#overlay .content .right.five {
+  background-color: #f6af1b;
+}
+#overlay .content.last {
+  box-shadow: 0px 0px 38px 3px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+  background-color: #f0f0f0;
+  padding: 0 20px 50px;
+}

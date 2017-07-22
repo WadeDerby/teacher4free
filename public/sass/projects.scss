@@ -1,0 +1,105 @@
+header#header{
+	box-shadow: 0px -3px 38px 3px rgba(0, 0, 0, 0.29);
+}
+#overlay{
+	background-color: rgb(240,240,240);
+
+	.content{
+		height: 685px;
+
+		.left{
+		display:inline-block;
+		width: 70%;
+		height: 100%;
+		}
+		.left.one{
+			background: url('../img/projects_1.jpg') no-repeat;
+			background-size: cover;
+
+		}
+		.left.two{
+			background: url('../img/projects_2.jpg') no-repeat;
+			background-size: cover;		
+		}
+		.left.three{
+			background: url('../img/projects_3.jpg') no-repeat;
+			background-size: cover;			
+		}
+		.left.four{
+			background: url('../img/projects_4.jpg') no-repeat;
+			background-size: cover;
+			
+		}
+		.left.five{
+			background: url('../img/projects_5.jpg') no-repeat;
+			background-size: cover;		
+		}
+		.right{
+			display: inline-block;
+			width: 30%;
+			height: 100%;
+			vertical-align:top;
+			.text-wrapper{
+				padding: 65px 75px;
+
+				.link{
+					a{
+						color: white;
+					}
+				}
+			}
+
+			.client {
+			    display: block;
+			    font-size: 14px;
+			    color: rgba(255,255,255,.7);
+			    font-weight: 200;
+			    margin: 0px 0px 5px 0px;
+			    line-height: 1;
+			}
+			.client-name{
+				display: block;
+			    color: #fff;
+			    font-size: 14px;
+			    line-height: 1;
+			    margin: 0 0 20px 0;
+			    font-weight: 400;
+			}
+			.description{
+				display: block;
+				font-size: 1.5em;
+				line-height: 1.7em;
+				margin: 0px 0px 22px 0px;
+			}
+		}
+		.right.one{
+			background-color: rgb(0,0,0);
+
+		}
+		.right.two{
+			background-color: rgb(0,181,222);
+				
+		}
+		.right.three{
+			background-color: rgb(88,88,91);
+				
+		}
+		.right.four{
+			background-color: rgb(0,17,125);
+				
+		}
+		.right.five{
+			background-color: rgb(246,175,27);
+				
+		}	
+	}
+
+	.content.last{
+		box-shadow: 0px 0px 38px 3px rgba(0, 0, 0, 0.15);
+	}
+}
+
+footer{
+	background-color: rgb(240,240,240);
+	padding: 0 20px 50px;
+}
