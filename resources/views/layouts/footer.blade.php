@@ -27,6 +27,6 @@
         </span><!--  
         --><span class="col">
             <span>Wade-Tech in coporation With HelpLink</span>
-            <span>HelpLink</span>
+            <span>Development by Wade Derby</span>
         </span>
     </footer>
