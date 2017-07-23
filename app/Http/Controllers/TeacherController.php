@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Teacher;
 use App\User;
+use App\Qualification;
 use App\Skill;
 use App\Course;
 use Auth;
@@ -59,7 +60,7 @@ class TeacherController extends Controller
     public function profile(Teacher $teacher)
     {
         $teacher = Teacher::where('username', Auth::user()->username)->first();
-        Carbon::parse($teacher->date_of_birth);
+        // Carbon::parse($teacher->date_of_birth);
         $date = $teacher->date_of_birth->toDateString();
         return view('teacher.profile' , compact('teacher' , 'date'));
     }
@@ -79,7 +80,9 @@ class TeacherController extends Controller
     }
     public function qualification(Teacher $teacher)
     {
-        return view('teacher.qualification');
+        $teacher = Teacher::where('id', Auth::user()->entity_id)->first();
+        $qualification = Qualification::where('teacher_id', Auth::user()->entity_id)->first();
+        return view('teacher.qualification' , compact('qualification', 'teacher'));
     }
     public function timeline(Teacher $teacher)
     {
@@ -187,6 +190,42 @@ class TeacherController extends Controller
 
             
         }
+    }
+
+    public function updateQualification(Request $request)
+    {
+        $teacher = Teacher::where('username', Auth::user()->username)->first();
+        $qualification = Qualification::where('teacher_id' ,$teacher->id)->get();
+
+        if($qualification->count() > 0){
+
+            $qualification->experience = $request->experience;
+            $qualification->degree = $request->degree; 
+            $qualification->course = $request->course;
+            $qualification->institution = $request->institution;
+
+            $isSaved = $qualification->save();
+        }else{
+            $newQualification = new Qualification();
+
+            $newQualification->teacher_id = $teacher->id;
+            $newQualification->experience = $request->experience;
+            $newQualification->degree = $request->degree; 
+            $newQualification->course = $request->course;
+            $newQualification->institution = $request->institution; 
+
+           $isSaved = $newQualification->save();
+        }
+
+        $success = ['error' => false, 'message' => 'Qualification saved successfully'];
+        $fail = ['error' => true, 'message' => 'Something went, couldnt save qualification'];
+
+        return response()->json($isSaved ? $success  : $fail);
+
+        
+
+
+        
     }
 
     /**

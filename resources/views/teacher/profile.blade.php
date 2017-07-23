@@ -29,12 +29,13 @@
 			<input type="email" name="email" value="{{$teacher['email']}}" placeholder="" > <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
 		<span class="field">
-			<input type="date" name="dob" value="{{$date}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="dob" value="{{$date}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
 			<!-- {{$teacher['date_of_birth']}} -->
 		</span>
 	</div>
 		
 	</form>
+
 	<div class="buttons">
 		<button data-action='editTeacher'>DONE</button>
 		<button>CANCEL</button>

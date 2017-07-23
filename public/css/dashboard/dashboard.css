@@ -144,6 +144,12 @@ button {
   border: none;
 }
 button#add {
-  margin-top: 40px;
   margin-left: 30px;
+}
+
+.form {
+  margin-bottom: 40px;
+}
+.form input[type=date], .form input[type=email], .form input[type=text] {
+  margin: 10px 0px;
 }

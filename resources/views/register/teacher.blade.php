@@ -25,7 +25,7 @@
 
 		<div class="input-field">
 			<label for="dob">Date Of Birth</label>
-			<input type="date" name="dob" value="" placeholder="dd/mm/yy " required>	
+			<input type="text" name="dob" value="" placeholder="yy-mm-dd " required>	
 		</div>
 
 		<div class="input-field">

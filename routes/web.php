@@ -44,6 +44,7 @@ Route::group(['prefix' => 'teacher/{username}'], function () {
 		Route::get('view/courses','TeacherController@courses');
 		Route::post('view/courses','TeacherController@updateCourses');
 		Route::get('view/qualification','TeacherController@qualification');
+		Route::post('view/qualification','TeacherController@updateQualification');
 		Route::get('view/timeline','TeacherController@timeline');
 		Route::get('view/messages','TeacherController@messages');
 		Route::get('view/settings','TeacherController@settings');

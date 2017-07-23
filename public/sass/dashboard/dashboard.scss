@@ -173,7 +173,15 @@ button{
 	border: none;
 
 	&#add{
-	    margin-top: 40px;
+	    // margin-top: 40px;
     	margin-left: 30px;
+	}
+}
+
+.form{
+	margin-bottom: 40px;
+
+	input[type=date],input[type=email], input[type=text]{
+		margin: 10px 0px;
 	}
 }

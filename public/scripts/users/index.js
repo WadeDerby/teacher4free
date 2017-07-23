@@ -41,6 +41,29 @@ Actions.editTeacher = function(e){
             });
 };
 
+Actions.editQualification = function(e){
+	var currentUser = $('.qualification input[name=currentUser]').val();
+	var userdata = {
+		experience: $('.qualification input[name=experience]').val(),
+		degree: $('.qualification input[name=degree]').val(),
+		course: $('.qualification input[name=course]').val(),
+		institution: $('.qualification input[name=institution]').val(),
+		_token: $('.qualification input[name=_token]').val()
+		};
+
+		// console.log(userdata);
+	$.ajax({
+                data: userdata,
+                url: '' + currentUser + '/view/qualification',
+                type: 'post',
+                success: function (response){
+                    console.log(response);
+                },
+                error: function () { }
+
+            });
+};
+
 Actions.editCourse = function(){
 	var currentUser = $('#course-form input[name=currentUser]').val();
 	var inputs = document.querySelector('#course-form').querySelectorAll('input[type=text], .field input[type=hidden] ')
