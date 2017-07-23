@@ -38,8 +38,11 @@ Route::post('/register/ngo','Auth\RegisterController@registerOrganization');
 Route::group(['prefix' => 'teacher/{username}'], function () {
 		Route::get('home','TeacherController@home');
 		Route::get('view/profile','TeacherController@profile');
+		Route::post('view/profile','TeacherController@updateProfile');
 		Route::get('view/skills','TeacherController@skills');
+		Route::post('view/skills','TeacherController@updateSkills');
 		Route::get('view/courses','TeacherController@courses');
+		Route::post('view/courses','TeacherController@updateCourses');
 		Route::get('view/qualification','TeacherController@qualification');
 		Route::get('view/timeline','TeacherController@timeline');
 		Route::get('view/messages','TeacherController@messages');

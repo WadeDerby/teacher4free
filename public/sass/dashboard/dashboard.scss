@@ -143,8 +143,9 @@
 
 	span.field{
 		display:block;
-
-	input[type=text], input[type=date] {
+	}
+	
+	input[type=text],input[type=email], input[type=date] {
 		width: 75%;
 		height: inherit;
 		background-color: white;
@@ -154,7 +155,7 @@
 		margin-top: 5px;
 		padding: 5px;
 		}
-	}
+
 
 }
 

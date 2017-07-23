@@ -53,7 +53,7 @@
 
 		<div class="input-field">
 			<label for="pass">Confirm password</label>
-			<input type="password" name="pass" value="" placeholder="" required>	
+			<input type="password" name="confirm_pass" value="" placeholder="" required>	
 		</div>
 
 		<div class="input-button">

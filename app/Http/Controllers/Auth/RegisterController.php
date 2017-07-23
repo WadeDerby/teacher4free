@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Skill;
 use App\Teacher;
 use App\Organization;
 use App\School;
@@ -88,11 +89,11 @@ class RegisterController extends Controller
             'institution' =>$request['inst'] , 
             'date_of_birth' =>$request['dob'] , 
             'email' =>$request['email'] , 
-            'phone' => $request['phoneNo'], 
-            'skills' => $request['skills'], 
+            'phone' => $request['phoneNo'],  
             'username' => $request['username'], 
             ]);
         $teacher = Teacher::where('username', $request['username'])->get();
+        $skills = $this->getskills($request['skills']);
 
         if($teacher->count() > 0){
             User::create([
@@ -101,6 +102,13 @@ class RegisterController extends Controller
                 'entity_id' => $teacher[0]->id,
                 'scope' => 1 ,
                 ]);
+            foreach ($skills as $skill) {
+               Skill::create([
+                'teacher_id'=>$teacher[0]->id,
+                'skill'=>$skill
+                ]);
+            }
+
             return redirect('/login');
         }else {
             return abort(500);
@@ -152,5 +160,9 @@ class RegisterController extends Controller
             'email' => $request['email'],
 
             ]);
+    }
+
+    private function getskills($value){
+        return explode(',', $value);
     }
 }

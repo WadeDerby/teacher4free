@@ -3,18 +3,27 @@
 </div>
 
 <div class="page-content">
-	<form class="form" action="">
+	<form id="course-form" class="form" action="">
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+	<input type="hidden" name="currentUser" value="{{$teacher['username']}}">
+		@if($courses->count() > 0)
+		@foreach($courses as $course)
 		<span class="field"> 
-			<input type="text" name="name" value="" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="{{$course['id']}}" value="{{$course['course']}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
-		<span class="field">
-			<input type="text" name="institution" value="" placeholder="">  <i class="fa fa-pencil" aria-hidden="true"></i>
-		</span>
+		@endforeach
+		
 
-		<button id="add"><i class="fa fa-plus" aria-hidden="true"></i>Add Course</button>
+		@else
+			<input type="text" name="course" value="" placeholder="">  
+			<input type="text" name="course" value="" placeholder="">  
+		@endif
+
+		
 	</form>
+	<button data-action='addCourse' id="add"><i class="fa fa-plus" aria-hidden="true"></i>Add Course</button>
 	<div class="buttons">
-		<button>DONE</button>
+		<button data-action='editCourse'>DONE</button>
 		<button>CANCEL</button>
 	</div>
 	
