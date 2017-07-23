@@ -12,12 +12,12 @@
             </span>
 
            
-            <span> +233 555 222 2323 </span>  
-            <span> email@example.com </span> 
+            <span> +233 261885470 </span>  
+            <span> helplinkreach@hotmail.com </span> 
               
         </span><!--  
         --><span class="col">
-           <span> Nicholas Building </span>  
+           <span> HelpLink Building </span>  
            <span> Suite 403 </span>  
            <span> 37 Swanton Street </span>  
            <span> Accra - Ghana </span>  
@@ -26,7 +26,7 @@
             <span>Newsletter</span>
         </span><!--  
         --><span class="col">
-            <span>Wade Tech</span>
-            <span>Development by Wade Derby</span>
+            <span>Wade-Tech in coporation With HelpLink</span>
+            <span>HelpLink</span>
         </span>
     </footer>

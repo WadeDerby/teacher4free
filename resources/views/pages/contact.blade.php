@@ -19,7 +19,7 @@
               
         </span><!--  
         --><span class="col">
-           <span> Nicholas Building </span>  
+           <span> HelpLink Building </span>  
            <span> Suite 403 </span>  
            <span> 37 Swanton Street </span>  
            <span> Accra - Ghana </span>  
