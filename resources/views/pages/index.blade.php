@@ -22,7 +22,7 @@
 			<span class="collection-title">Reviews from users</span>
 			<div class="quotes-item">
 				<span class="quote-body">
-					"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, veritatis magni obcaecati dignissimos pariatur eius ullam assumenda."
+					"The thrill of reaching out to so many people is exciting. I'm glad HelpLink gives me this oppotunity"
 				</span>
 				<span class="quote-person">
 					- John Doe(Teacher) 
@@ -30,7 +30,7 @@
 			</div>
 			<div class="quotes-item">
 				<span class="quote-body">
-					"Nisi sit dolore labore provident, voluptatem odio officia praesentium ea optio ducimus."
+					"We have benefit greatly from the support from many volunteer teacher from HelpLink."
 				</span>
 				<span class="quote-person">
 					- Jane Doe, Headmistress(School) 
