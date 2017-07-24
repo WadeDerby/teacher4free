@@ -13,6 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/news','HomeController@news');
+Route::get('/test','TeacherController@destroy');
 Route::get('/about','HomeController@about');
 Route::get('/projects','HomeController@projects');
 Route::get('/contact','HomeController@contact');
@@ -54,9 +55,13 @@ Route::group(['prefix' => 'teacher/{username}'], function () {
 Route::group(['prefix' => 'school/{username}'], function () {
 		Route::get('home','SchoolController@home');
 		Route::get('view/profile','SchoolController@profile');
+		Route::post('view/profile','SchoolController@updateProfile');
 		Route::get('view/skills','SchoolController@skills');
+		Route::post('view/skills','SchoolController@updateSkills');
 		Route::get('view/courses','SchoolController@courses');
+		Route::post('view/courses','SchoolController@updateCourses');
 		Route::get('view/timeline','SchoolController@timeline');
+		Route::get('view/messages','SchoolController@messages');
 		Route::get('view/messages','SchoolController@messages');
 		Route::get('view/settings','SchoolController@settings');
 		Route::get('search','SchoolController@search');

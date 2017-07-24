@@ -3,7 +3,9 @@
 </div>
 
 <div id="profile" class="page-content">
-	<form class="form" action="">
+	<form class="profile form" action="">
+	<input type="hidden" name="_token" value="{{ csrf_token() }}">
+	<input type="hidden" name="currentUser" value="{{$school['username']}}">
 	<div class="photo-form">
 		<span class="photo"><img src="{{URL::to('img/profile-photo.jpg')}}" class="profile-photo"/></span>
 		<span class="photo-text">Edit Profile Photo</span>
@@ -12,25 +14,24 @@
 	<div class="text-form">
 		
 		<span class="field"> 
-			<input type="text" name="name" value="" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="name" value="{{$school['name']}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
 		<span class="field">
-			<input type="text" name="institution" value="" placeholder="">  <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="username" value="{{$school['username']}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
 		<span class="field">
-			<input type="text" name="phone" value="" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="location" value="{{$school['location']}}" placeholder="">  <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
 		<span class="field">
-			<input type="text" name="user" value="" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
+			<input type="text" name="age" value="{{$school['age']}}" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>
-		<span class="field">
-			<input type="date" name="" value="" placeholder=""> <i class="fa fa-pencil" aria-hidden="true"></i>
-		</span>
+		
+		
 	</div>
 		
 	</form>
 	<div class="buttons">
-		<button>DONE</button>
+		<button data-action='editSchool'>DONE</button>
 		<button>CANCEL</button>
 	</div>
 </div>

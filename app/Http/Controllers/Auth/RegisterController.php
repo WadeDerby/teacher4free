@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
-use App\Skill;
+use App\Course;
 use App\Teacher;
 use App\Organization;
 use App\School;
@@ -93,7 +93,7 @@ class RegisterController extends Controller
             'username' => $request['username'], 
             ]);
         $teacher = Teacher::where('username', $request['username'])->get();
-        $skills = $this->getskills($request['skills']);
+        $courses = $this->getskills($request['courses']);
 
         if($teacher->count() > 0){
             User::create([
@@ -102,10 +102,10 @@ class RegisterController extends Controller
                 'entity_id' => $teacher[0]->id,
                 'scope' => 1 ,
                 ]);
-            foreach ($skills as $skill) {
-               Skill::create([
-                'teacher_id'=>$teacher[0]->id,
-                'skill'=>$skill
+            foreach ($courses as $course) {
+               Course::create([
+                'entity_id'=> 'T' . $teacher[0]->id,
+                'course'=>$course
                 ]);
             }
 
@@ -126,7 +126,7 @@ class RegisterController extends Controller
         School::create([
             'name' => $request['name'],
             'location' => $request['location'],
-            'age' => $request['age'],
+            'contact_info' => $request['contact_info'],
             'username' => $request['username'],
 
             ]);
@@ -136,7 +136,7 @@ class RegisterController extends Controller
             User::create([
                 'username' => $request['username'],
                 'password' => Hash::make($request['pass']),
-                'entity_id' => $school[0]->id,
+                'entity_id' =>  $school[0]->id,
                 'scope' => 2 ,
                 ]);
             return redirect('/login');

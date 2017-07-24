@@ -17,8 +17,8 @@
 		</div>
 
 		<div class="input-field">
-			<label for="age">Age of School</label>
-			<input  name="age" type="text"  required>
+			<label for="contact_info">Contact Info</label>
+			<input  name="contact_info" type="text"  required>
 			
 		</div>
 

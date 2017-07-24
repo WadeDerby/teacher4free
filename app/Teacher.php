@@ -4,6 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use App\School;
+use App\Course;
+use App\Skills;
 
 class Teacher extends Model
 {
@@ -42,6 +45,8 @@ class Teacher extends Model
     {
         return Carbon::parse($date);
     }
+
+    
 
 
     	

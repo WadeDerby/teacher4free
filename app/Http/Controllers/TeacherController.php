@@ -6,6 +6,7 @@ use App\Teacher;
 use App\User;
 use App\Qualification;
 use App\Skill;
+use App\School;
 use App\Course;
 use Auth;
 use Illuminate\Http\Request;
@@ -21,8 +22,8 @@ class TeacherController extends Controller
     public function index()
     {
         $teacher = Teacher::where('username', Auth::user()->username)->first();
-        // dd($teacher);
-        return view('teacher.dashboard', compact('teacher'));
+        $schools = $this->getSchools(Auth::user()->entity_id);
+        return view('teacher.dashboard', compact('teacher', 'schools'));
     }
 
     /**
@@ -54,7 +55,9 @@ class TeacherController extends Controller
      */
     public function home(Teacher $teacher)
     {
-        return view('teacher.home');
+       $teacher = Teacher::where('username', Auth::user()->username)->first();
+        $schools = $this->getSchools(Auth::user()->entity_id);
+        return view('teacher.home', compact('teacher', 'schools'));
     }
 
     public function profile(Teacher $teacher)
@@ -66,7 +69,7 @@ class TeacherController extends Controller
     }
     public function skills(Teacher $teacher)
     {
-        $skills = Skill::where('teacher_id', Auth::user()->entity_id)->get();
+        $skills = Skill::where('entity_id', 'T' . Auth::user()->entity_id)->get();
         $teacher = Teacher::where('id', Auth::user()->entity_id)->first();
         // dd($skills);
 
@@ -74,7 +77,7 @@ class TeacherController extends Controller
     }
     public function courses(Teacher $teacher)
     {
-        $courses = Course::where('teacher_id', Auth::user()->entity_id)->get();
+        $courses = Course::where('entity_id', 'T' . Auth::user()->entity_id)->get();
         $teacher = Teacher::where('id', Auth::user()->entity_id)->first();
         return view('teacher.courses',compact('courses', 'teacher'));
     }
@@ -155,14 +158,14 @@ class TeacherController extends Controller
         $skills = $request->skills;
         foreach ($skills as $skill) {
             if($skill['name'] != 'skill'){
-                $thisSkill = Skill::where('teacher_id', Auth::user()->entity_id)
+                $thisSkill = Skill::where('entity_id','T' . Auth::user()->entity_id)
                             ->where('id', $skill['name'])
                             ->first();
                 $thisSkill->skill = $skill['value'];
                 $thisSkill->save();
             }else{
                 $newSkill = new Skill();
-                $newSkill->teacher_id = Auth::user()->entity_id; 
+                $newSkill->entity_id = 'T' . Auth::user()->entity_id; 
                 $newSkill->skill =  $skill['value'];
                 $newSkill->save();
             }
@@ -176,14 +179,14 @@ class TeacherController extends Controller
         $courses = $request->courses;
         foreach ($courses as $course) {
             if($course['name'] != 'course'){
-                $thiscourses = Course::where('teacher_id', Auth::user()->entity_id)
-                            ->where('id', $courses['name'])
+                $thiscourse = Course::where('entity_id', 'T' . Auth::user()->entity_id)
+                            ->where('id', $course['name'])
                             ->first();
                 $thiscourse->course = $course['value'];
                 $thiscourse->save();
             }else{
                 $newcourse = new Course();
-                $newcourse->teacher_id = Auth::user()->entity_id; 
+                $newcourse->entity_id = 'T' . Auth::user()->entity_id; 
                 $newcourse->course =  $course['value'];
                 $newcourse->save();
             }
@@ -236,6 +239,33 @@ class TeacherController extends Controller
      */
     public function destroy(Teacher $teacher)
     {
-        //
+        $school_ids = $this->getSchools(Auth::user()->entity_id);
+        dd($school_ids);
+    }
+
+
+    public function getSchools($teacher_id)
+    {
+        $courses = Course::where('entity_id' , 'T' . $teacher_id )->get();
+        $school_ids = [];
+        $schools = [];
+        foreach ($courses as $course) {
+             $schoolcourses = Course::where('course' , $course->course)->get();
+            foreach ($schoolcourses as $schoolcourse ) {
+                if(substr($schoolcourse->entity_id, 0, 1) == "S"){
+                    $school_id = substr($schoolcourse->entity_id, 1);
+                    array_push($school_ids, $school_id);
+                }
+            }
+        }
+
+        $unique_ids = array_unique($school_ids);
+
+        foreach ($unique_ids as $school_id) {
+            $school = School::where('id' , $school_id)->first();
+            array_push($schools, $school);
+        }
+
+        return $schools;
     }
 }

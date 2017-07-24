@@ -16,23 +16,23 @@ Actions.home = function(e) {
 	window.location.replace(url);
 };
 
-Actions.editTeacher = function(e){
-	var currentUser = $('.teacher input[name=currentUser]').val();
+Actions.editSchool = function(e){
+	var currentUser = $('.profile input[name=currentUser]').val();
 	var userdata = {
-		name: $('.teacher input[name=full_name]').val(),
-		username: $('.teacher input[name=user]').val(),
-		phone: $('.teacher input[name=phone]').val(),
-		school: $('.teacher input[name=institution]').val(),
-		date: $('.teacher input[name=dob]').val(),
-		email: $('.teacher input[name=email]').val(),
-		_token: $('.teacher input[name=_token]').val(),
+		name: $('.profile input[name=name]').val(),
+		username: $('.profile input[name=username]').val(),
+		location: $('.profile input[name=location]').val(),
+		age: $('.profile input[name=age]').val(),
+		_token: $('.profile input[name=_token]').val()
 		};
 
+		// console.log(userdata);
 	$.ajax({
                 data: userdata,
                 url: '' + currentUser + '/view/profile',
                 type: 'post',
                 success: function (response){
+                    console.log(response);
                 },
                 error: function () { }
 
@@ -49,6 +49,7 @@ Actions.editQualification = function(e){
 		_token: $('.qualification input[name=_token]').val()
 		};
 
+		// console.log(userdata);
 	$.ajax({
                 data: userdata,
                 url: '' + currentUser + '/view/qualification',
@@ -62,15 +63,15 @@ Actions.editQualification = function(e){
 };
 
 Actions.editCourse = function(){
-	var currentUser = $('#course-form input[name=currentUser]').val();
-	var inputs = document.querySelector('#course-form').querySelectorAll('input[type=text], .field input[type=hidden] ')
+	var currentUser = $('#school-course-form input[name=currentUser]').val();
+	var inputs = document.querySelector('#school-course-form').querySelectorAll('input[type=text], .field input[type=hidden] ')
 	var coursesObj = [];
 	inputs.forEach(function(input) {
             coursesObj.push({ name : input.getAttribute('name') , value : input.value });
         });
 	var userdata = {
 		courses: coursesObj,
-		_token: $('#course-form input[name=_token]').val(),
+		_token: $('#school-course-form input[name=_token]').val(),
 
 	};
 
@@ -87,15 +88,15 @@ Actions.editCourse = function(){
 };
 
 Actions.editSkill = function(e){
-	var currentUser = $('#skill-form input[name=currentUser]').val();
-	var inputs = document.querySelector('#skill-form').querySelectorAll('input[type=text], .field input[type=hidden] ')
+	var currentUser = $('#school-skill input[name=currentUser]').val();
+	var inputs = document.querySelector('#school-skill').querySelectorAll('input[type=text], .field input[type=hidden] ')
 	var skillsObj = [];
 	inputs.forEach(function(input) {
             skillsObj.push({ name : input.getAttribute('name') , value : input.value });
         });
 	var userdata = {
 		skills: skillsObj,
-		_token: $('#skill-form input[name=_token]').val(),
+		_token: $('#school-skill input[name=_token]').val(),
 
 	};
 
@@ -117,9 +118,10 @@ Actions.addSkill = function(e){
             placeholder: 'New skill',
             name: 'skill',
             });
-	$('#skill-form').append(input);
+	console.log(e.currentTarget);
+	$('#school-skill').append(input);
 
-            // input.insertBefore($(e.currentTarget).parent('#skill-form'));
+            // input.insertBefore($(e.currentTarget).parent('#school-skill'));
 };
 Actions.addCourse = function(e){
 	var input = $("<input>", {
@@ -127,7 +129,8 @@ Actions.addCourse = function(e){
             placeholder: 'New Course',
             name: 'course',
             });
-	$('#course-form').append(input);
+	console.log(e.currentTarget);
+	$('#school-course-form').append(input);
 
-            // input.insertBefore($(e.currentTarget).parent('#skill-form'));
+            // input.insertBefore($(e.currentTarget).parent('#school-skill'));
 };

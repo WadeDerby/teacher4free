@@ -26,7 +26,7 @@
             <span>Newsletter</span>
         </span><!--  
         --><span class="col">
-            <span>Wade-Tech in coporation With HelpLink</span>
-            <span>Development by Wade Derby</span>
+            <span class="attr">&copy;{{date('Y')}} Wade-Tech</span>
+            <span class="attr">Development by Wade Derby</span>
         </span>
     </footer>

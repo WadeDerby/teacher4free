@@ -7,7 +7,7 @@
 	<form class="form qualification" action="">
 		<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		<input type="hidden" name="currentUser" value="{{$teacher['username']}}">
-		@if($qualification->count() > 0)
+		@if(isset($qualification))
 		<span class="field"> 
 			<input type="text" name="experience" value="{{$qualification['experience']}}" placeholder="Years of experience" > <i class="fa fa-pencil" aria-hidden="true"></i>
 		</span>

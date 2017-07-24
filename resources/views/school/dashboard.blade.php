@@ -62,7 +62,7 @@
 						</button>
 						<input type="hidden" id="user" value="2" placeholder="">
 					</form>
-					<span class="refresh"></span>
+					<span class="refresh view-btn"  data-href="/home"></span>
 
 				</header>
 				<div id="content">
@@ -76,7 +76,7 @@
     @include('sources.animation')
     <script src="{{url('scripts/lib/dashboard.js')}}"></script>
     <script src="{{url('scripts/lib/dashboard.ui.js')}}"></script>
-     <script src="{{url('scripts/users/index.js')}}"></script>
+     <script src="{{url('scripts/users/index_new.js')}}"></script>
 	</body>
 	
 </html>

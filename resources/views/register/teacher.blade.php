@@ -40,8 +40,8 @@
 		</div>
 
 		<div class="input-field">
-			<label for="skills">Skills</label>
-			<textarea name="skills" id="" cols="30" rows="5"></textarea>
+			<label for="courses">Course</label>
+			<textarea name="courses" id="" cols="30" rows="5"></textarea>
 		</div>		
 
 

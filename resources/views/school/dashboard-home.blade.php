@@ -9,9 +9,18 @@
 				Suggestions
 			</div>
 			<ul class="list-collection">
-				<li class="list-item"></li>
-				<li class="list-item"></li>
-				<li class="list-item"></li>
+				@if(isset($teachers[0]))
+				@foreach($teachers as $teacher)
+				<li class="list-item">
+				{{$teacher['name']}}
+				{{$teacher['phone']}}
+				</li>
+				@endforeach
+
+				@else
+
+				<li>No suggestion yet</li>
+				@endif
 			</ul>
 		</div>
 		<div class="square-2 card">
