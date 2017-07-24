@@ -60,13 +60,19 @@
 						<button data-action="search">
 							<i class="fa fa-search font-icon" aria-hidden="true"></i>
 						</button>
+						<button data-action="home">
+							<i class="fa fa-home font-icon" aria-hidden="true"></i>
+						</button>
+						<button class="refresh view-btn" data-href="/home" >
+							<i class="fa fa-refresh font-icon" aria-hidden="true"></i>
+						</button>
+						
 						<input type="hidden" id="user" value="2" placeholder="">
 					</form>
-					<span class="refresh view-btn"  data-href="/home"></span>
 
 				</header>
 				<div id="content">
-					@include('school.dashboard-home')
+					@include('school.home')
 				</div>
 			</section>
 		</section>

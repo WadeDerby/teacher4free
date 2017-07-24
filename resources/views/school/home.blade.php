@@ -12,8 +12,8 @@
 				@if(isset($teachers[0]))
 				@foreach($teachers as $teacher)
 				<li class="list-item">
-				{{$teacher['name']}}
-				{{$teacher['phone']}}
+				<span>{{$teacher['name']}}</span>
+				<span>{{$teacher['phone']}}</span>
 				</li>
 				@endforeach
 
@@ -27,11 +27,7 @@
 			<div class="card-title">
 				Requested
 			</div>
-			<ul class="list-collection">
-				<li class="list-item"></li>
-				<li class="list-item"></li>
-				<li class="list-item"></li>
-			</ul>
+			
 		</div>
 	</div>
 
